@@ -14,13 +14,22 @@ class AddProject extends Component {
     }
 
     handleSubmit = (e) => {
+        alert('hi');
         e.preventDefault();
         //API URL= http://ts-project-service-taskeen-dev.appdev-cloudnative-ocp43-6fb0b86391cd68c8282858623a1dddff-0000.eu-gb.containers.appdomain.cloud/api/Project/createProject
-        axios.post('http://ts-project-service-taskeen-dev.appdev-cloudnative-ocp43-6fb0b86391cd68c8282858623a1dddff-0000.eu-gb.containers.appdomain.cloud/api/Project/createProject',{
-                "projectName": this.state.ProjectName,
-                "natureofIndustry": this.state.NatureofIndustry,
-                "projectCode": this.state.ProjectCode
-        })
+        axios.post('http://ts-project-service-taskeen-dev.appdev-cloudnative-ocp43-6fb0b86391cd68c8282858623a1dddff-0000.eu-gb.containers.appdomain.cloud/api/Project/createProject/',
+            {
+            headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+            },
+            data: {
+                "projectName": "dummy",
+                "natureofIndustry": "dummy",
+                "projectCode": "a0050",
+            }
+        }
+        )
             .then(function (response) {
                 console.log(response);
             })
