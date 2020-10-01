@@ -9,7 +9,7 @@ class AddProject extends Component {
             ProjectCode: '',
             ProjectName: '',
             NatureofIndustry: '',
-            ProjectAdded: false,
+            ProjectAdded: false            
         }
     }
 
@@ -17,21 +17,22 @@ class AddProject extends Component {
         alert('hi');
         e.preventDefault();
         //API URL= http://ts-project-service-taskeen-dev.appdev-cloudnative-ocp43-6fb0b86391cd68c8282858623a1dddff-0000.eu-gb.containers.appdomain.cloud/api/Project/createProject
-        axios.post('http://ts-project-service-taskeen-dev.appdev-cloudnative-ocp43-6fb0b86391cd68c8282858623a1dddff-0000.eu-gb.containers.appdomain.cloud/api/Project/createProject/',
+        //axios.post('http://ts-project-service-taskeen-dev.appdev-cloudnative-ocp43-6fb0b86391cd68c8282858623a1dddff-0000.eu-gb.containers.appdomain.cloud/api/Project/createProject/',
+        axios.post('http://project-service-git-test-taskeen-dev.appdev-cloudnative-ocp43-6fb0b86391cd68c8282858623a1dddff-0000.eu-gb.containers.appdomain.cloud/api/Project/createProject/',
             {
-            headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json',
-            },
-            data: {
-                "projectName": "dummy",
-                "natureofIndustry": "dummy",
-                "projectCode": "a0050",
+                "projectName": this.state.ProjectName,
+                "natureofIndustry": this.state.NatureofIndustry,
+                "projectCode": this.state.ProjectCode,
             }
-        }
-        )
-            .then(function (response) {
-                console.log(response);
+        )        
+            .then( res=> {
+               if (res.status===201)
+               {
+                   console.log('Data inserted successfully')
+                   this.setState({ProjectAdded:true})
+                   console.log(this.state.ProjectAdded)
+               }
+            
             })
     }
 
@@ -155,6 +156,12 @@ class AddProject extends Component {
                                         </div>
                                     </div>
                                 </form>
+                                {
+                                    this.state.ProjectAdded ?
+                                        <div className="p-3 mb-2 bg-success text-white" style={{ margin: 'auto', width: '50%', padding: '10px' }}>Project added successfully</div>
+                                        :
+                                    <div></div>
+                                }
 
 
 
