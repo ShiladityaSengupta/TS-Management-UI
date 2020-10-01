@@ -17,16 +17,20 @@ function App() {
     <BrowserRouter>
     <Switch>
       <div className="App">
-        <Route path="/" component={NavigationBar} />
-        <Route exact path="/AddNotification/Add" component={PushNotification} />
-        <Route exact path="/allNotification" component={getAllNotification} />
-        <Route exact path="/SuperAdmin/Dashboard" component={DashboardSA} />
-        <Route exact path="/Project/Index" component={AllProjectsTable} />
-        <Route exact path="/AllUsers/admin" component={AllAdminsTable} />
-        <Route exact path="/AllUsers/Users" component={AllUsersTable} />
-        <Route exact path="/Project/Add" component={AddProject} />
-        <Route exact path="/Registration/Registration" component={CreateUser} />
-        <Route exact path="/SuperAdmin/CreateAdmin" component={CreateAdmin} />
+        <Route exact path="/" component={LoginForm} />
+        <Route path ="/nav" component={NavigationBar} />
+
+        <Route exact path="/nav/AddNotification/Add" component={PushNotification} />
+        <Route exact path="/nav/allNotification" component={getAllNotification} />
+
+        <Route path="/nav/SuperAdmin/Dashboard" component={DashboardSA} />
+
+          <Route exact path="/nav/Project/Index" component={AllProjectsTable} />
+          <Route exact path="/nav/AllUsers/admin" component={AllAdminsTable} />
+          <Route exact path="/nav/AllUsers/Users" component={AllUsersTable} />
+          <Route exact path="/nav/Project/Add" component={AddProject} />
+          <Route exact path="/nav/Registration/Registration" component={CreateUser} />
+          <Route exact path="/nav/SuperAdmin/CreateAdmin" component={CreateAdmin} />
 
       </div>
     </Switch>

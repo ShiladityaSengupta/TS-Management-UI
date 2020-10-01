@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './DashboardSA.css'
+import './DashboardSA.css';
 import axios from 'axios';
 
 class DashboardSA extends Component {
@@ -54,7 +54,7 @@ class DashboardSA extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="/AllUsers/Users">
+                                    <a href="/nav/AllUsers/Users">
                                         <div class="panel-footer">
                                             <span class="pull-left">View Details</span>
                                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -76,7 +76,7 @@ class DashboardSA extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="/AllUsers/admin">
+                                    <a href="/nav/AllUsers/admin">
                                         <div class="panel-footer">
                                             <span class="pull-left">View Details</span>
                                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -98,7 +98,7 @@ class DashboardSA extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="/Project/Index">
+                                    <a href="/nav/Project/Index">
                                         <div class="panel-footer">
                                             <span class="pull-left">View Details</span>
                                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

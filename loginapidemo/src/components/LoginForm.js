@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import DashboardSA from './DashboardSA';
+import NavigationBar from './NavigationBar';
 import axios  from 'axios';
-//import { Redirect } from "react-router-dom";
+import './LoginForm.css';
 
 class LoginForm extends Component {
 
@@ -28,7 +29,7 @@ class LoginForm extends Component {
         //const { username, password } = this.state;
         //alert(this.state.username);
         //alert(this.state.password);
-        const apiUrl = 'http://demo-login-service-dev-st.appdev-cloudnative-ocp43-6fb0b86391cd68c8282858623a1dddff-0000.eu-gb.containers.appdomain.cloud/api/Login/'+ this.state.username+ '/'+ this.state.password;
+        const apiUrl = 'http://ts-user-taskeen-dev.appdev-cloudnative-ocp43-6fb0b86391cd68c8282858623a1dddff-0000.eu-gb.containers.appdomain.cloud/api/User/Login/'+ this.state.username+ '/'+ this.state.password;
         //alert(apiUrl);
         
         axios.get(apiUrl)
@@ -56,7 +57,10 @@ class LoginForm extends Component {
             //alert(this.state.loginSuccess) 
             //return <Redirect to='/App' />
             return(
+                <div>
+                <NavigationBar />
                 <DashboardSA />
+                </div>
                 /*
                 <div className='jumbotron'>
                     <h1>Page redirected on successful login</h1>
@@ -68,36 +72,38 @@ class LoginForm extends Component {
             )
         }
 
-        else{
+    else{
+    
             return(
         //const {username, password} = this.state;
-            <div>
+            <div className="container body-content">
                 <form onSubmit={this.handleSubmit}>
                     
-                    <title>Login</title>
-                    <div className="container body-content">
-                        <div className="form-group">
-                            <div>
+                        <div class="form-group">
+                            <div class="col-md-12 col-xs-12">
                                 <h3>Login</h3>
                             </div>
                         </div>
+
+                    <div className="container body-content">
+                        
                         <div className="form-group">
-                            <div>
+                            <div className="col-md-12 col-xs-12">
                                 <label htmlFor="Username">User</label>
                                 <input className="form-control" id="Username" maxLength={20} name="username" type="text" onChange={this.handleChange}/>
-                              
+                                
                             </div>
                         </div>
                         <div className="form-group">
-                            <div>
+                            <div className="col-md-12 col-xs-12">
                                 <label htmlFor="Password">Password</label>
                                 <input className="form-control" data-val="true" data-val-required="Password Required" id="password" maxLength={30} name="password" type="password" onChange={this.handleChange}/>
                               
                             </div>
                         </div>
                         <div className="form-group">
-                            <div>
-                                <input id="Submit1" className="btn btn-success" type="submit" defaultValue="Sign in To Account" />
+                            <div className="col-md-offset-0 col-md-10">
+                                <input id="Submit1" className="btn btn-success" type="submit" defaultValue="Sign in To Account" style={{'margin-top':20}}/>
                             </div>
                         </div>
                     </div>

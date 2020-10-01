@@ -74,7 +74,7 @@ class AddProject extends Component {
                                                     <div className="col-md-offset-0 col-md-12">
                                                         <input type="submit" value="Save Details" className="btn btn-success" style={{ 'margin-right': 10 }} />
                                                         <input type="reset" value="Cancel" className="btn btn-danger" style={{ 'margin-right': 10 }} />
-                                                        <Link to='/Project/Index'>
+                                                        <Link to='/nav/Project/Index'>
                                                             <input type="reset" value="All Projects" className="btn btn-info" />
                                                         </Link>
                                                     </div>

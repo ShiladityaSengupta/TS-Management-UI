@@ -16,7 +16,7 @@ class CreateAdmin extends Component {
             Username: '',
             Password: '',
             ConfirmPassword: '',
-            UserAdded: false
+            AdminAdded: false
         }
     }
 
@@ -154,9 +154,9 @@ class CreateAdmin extends Component {
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <input type="submit" value="Create Admin" class="btn btn-success" style={{ 'margin-right': 10 }} />
-                                        <a class="btn btn-danger" href="/SuperAdmin/CreateAdmin" style={{ 'margin-right': 10 }} >Clear</a>
+                                        <a class="btn btn-danger" href="/nav/SuperAdmin/CreateAdmin" style={{ 'margin-right': 10 }} >Clear</a>
 
-                                        <a class="btn btn-info" href="/AllUsers/Users">All Users</a>
+                                        <a class="btn btn-info" href="/nav/AllUsers/Users">All Users</a>
 
                                     </div>
                                 </div>
@@ -164,7 +164,7 @@ class CreateAdmin extends Component {
 
                             </form>
                             {
-                                this.state.UserAdded ?
+                                this.state.AdminAdded ?
                                     <div className="p-3 mb-2 bg-success text-white" style={{ margin: 'auto', width: '50%', padding: '10px' }}>Admin added successfully</div>
                                     :
                                     <div></div>

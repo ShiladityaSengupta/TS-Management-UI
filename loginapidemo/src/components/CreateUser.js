@@ -154,9 +154,9 @@ class CreateUser extends Component {
                                                                                             <div class="row">
                                                                                                 <div class="col-lg-4">
                                         <input type="submit" value="Create User" class="btn btn-success" style={{ 'margin-right': 10 }} />
-                                        <a class="btn btn-danger" href="/Registration/Registration" style={{ 'margin-right': 10 }} >Clear</a>
+                                        <a class="btn btn-danger" href="/nav/Registration/Registration" style={{ 'margin-right': 10 }} >Clear</a>
 
-                                                                                                        <a class="btn btn-info" href="/AllUsers/Users">All Users</a>
+                                                                                                        <a class="btn btn-info" href="/nav/AllUsers/Users">All Users</a>
 
                     </div>
      </div>

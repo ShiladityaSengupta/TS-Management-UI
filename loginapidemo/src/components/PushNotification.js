@@ -94,9 +94,9 @@ class PushNotification extends Component{
             <div className="row">
                 <div className="form-group">
                     <div style={{"margin-top":"10px"}} className="col-md-offset-0 col-md-12">
-                        <input type="submit"value="Save Details" className="btn btn-success"/>
-                        <input type="" className="btn btn-danger" value="Cancel"/>
-                        <Link to='/allNotification'>
+                        <input type="submit" value="Save Details" className="btn btn-success" style={{ 'margin-right': 10 }} />
+                        <input type="reset" className="btn btn-danger" value="Cancel" style={{ 'margin-right': 10 }} />
+                        <Link to='/nav/allNotification'>
                 
                 
                         <input type="button" className="btn btn-info" value="All Notification"/>

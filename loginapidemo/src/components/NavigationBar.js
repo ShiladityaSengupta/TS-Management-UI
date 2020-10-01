@@ -16,59 +16,45 @@ class NavigationBar extends Component {
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                 </button>
-                <a className="navbar-brand" href="/SuperAdmin/Dashboard">TIME MANAGER</a>
+                <a className="navbar-brand" href="/nav/SuperAdmin/Dashboard">TIME MANAGER</a>
             </div>
             {/* <!-- /.navbar-header --> */}
             <ul className="nav navbar-top-links navbar-right">
-                <li className="dropdown">
-                    Hi  SuperAdmin !
-                </li>
-                <li className="dropdown">
-                    <a className="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i className="fa fa-user fa-fw"></i> <i className="fa fa-caret-down"></i>
-                    </a>
-                    <ul className="dropdown-menu dropdown-user">
-                        <li>
-                            <a href="/Login/Logout"><i className="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    {/* <!-- /.dropdown-user --> */}
-                </li>
-                {/* <!-- /.dropdown --> */}
+                <a class="btn btn-danger" href="/" style={{ 'margin-right': 10, 'margin-top':10 }} >Logout</a>
             </ul>
             {/* <!-- /.navbar-top-links --> */}
             <div className="navbar-default sidebar" role="navigation">
                 <div className="sidebar-nav navbar-collapse">
                     <ul className="nav" id="side-menu">
                         <li>
-                            <a href="/SuperAdmin/Dashboard"><i className="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="/nav/SuperAdmin/Dashboard"><i className="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="/Registration/Registration"><i className="fa fa-edit fa-fw"></i> Create User</a>
+                            <a href="/nav/Registration/Registration"><i className="fa fa-edit fa-fw"></i> Create User</a>
                         </li>
                         <li>
-                            <a href="/SuperAdmin/CreateAdmin"><i className="fa fa-edit fa-fw"></i> Create Admin</a>
+                            <a href="/nav/SuperAdmin/CreateAdmin"><i className="fa fa-edit fa-fw"></i> Create Admin</a>
                         </li>
                         <li>
-                            <a href="/SuperAdmin/AssignRoles"><i className="fa fa-edit fa-fw"></i>AssignRoles</a>
+                            <a href="/nav/SuperAdmin/AssignRoles"><i className="fa fa-edit fa-fw"></i>AssignRoles</a>
                         </li>
                         <li>
-                            <a href="/AllRoles/Roles"><i className="fa fa-table fa-fw"></i> All Roles</a>
+                            <a href="/nav/AllRoles/Roles"><i className="fa fa-table fa-fw"></i> All Roles</a>
                         </li>
                         <li>
-                            <a href="/Project/Add"><i className="fa fa-edit fa-fw"></i> Add Project</a>
+                            <a href="/nav/Project/Add"><i className="fa fa-edit fa-fw"></i> Add Project</a>
                         </li>
                         <li>
-                            <a href="/ResetPassword/Index"><i className="fa fa-gear fa-fw"></i> Reset Password</a>
+                            <a href="/nav/ResetPassword/Index"><i className="fa fa-gear fa-fw"></i> Reset Password</a>
                         </li>
                         <li>
-                            <a href="/TimeSheetMasterExport/Report"><i className="fa fa-table fa-fw"></i>Export All TimeSheets</a>
+                            <a href="/nav/TimeSheetMasterExport/Report"><i className="fa fa-table fa-fw"></i>Export All TimeSheets</a>
                         </li>
                         <li>
-                            <a href="/ExpenseMasterExport/Report"><i className="fa fa-table fa-fw"></i>Export All Expense</a>
+                            <a href="/nav/ExpenseMasterExport/Report"><i className="fa fa-table fa-fw"></i>Export All Expense</a>
                         </li>
                         <li>
-                            <a href="/AddNotification/Add"><i className="fa fa-bell fa-fw"></i>Push Notification</a>
+                            <a href="/nav/AddNotification/Add"><i className="fa fa-bell fa-fw"></i>Push Notification</a>
                         </li>
                     </ul>
                 </div>
